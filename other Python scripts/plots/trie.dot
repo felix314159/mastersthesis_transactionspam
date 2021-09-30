@@ -1,0 +1,62 @@
+digraph G
+{
+    rankdir="LR"
+	node[shape = circle];
+        
+	node_empty[label = ""];
+	
+	node_B[label = "B"];
+	node_Bi[label = "Bi"];
+
+	node_Bin[label = "Bin"];
+	node_Bit[label = "Bit"];
+
+	node_Bina[label = "Bina"];
+	node_Binan[label = "Binan"];
+	node_Binanc[label = "Binanc"];
+	
+	node_Bitf[label = "Bitf"];
+	node_Bitfi[label = "Bitfi"];
+	node_Bitfin[label = "Bitfin"];
+	node_Bitfine[label = "Binfine"];
+	
+	node_C[label = "C"];
+	node_Co[label = "Co"];
+	node_Coi[label = "Coi"];
+	node_Coin[label = "Coin"];
+	node_Coinb[label = "Coinb"];
+	node_Coinba[label = "Coinba"];
+	node_Coinbas[label = "Coinbas"];
+	
+	node[shape = doublecircle];
+	node_Binance[label = "Binance"];
+	node_Bitfinex[label = "Binfinex"];
+	node_Coinbase[label = "Coinbase"];
+
+	"node_empty" -> "node_B"[label="B", dir=forward];
+	"node_empty" -> "node_C"[label="C", dir=forward];
+
+	"node_B" -> "node_Bi"[label="  i", dir=forward];
+	"node_Bi" -> "node_Bin"[label=" n", dir=forward];
+	"node_Bi" -> "node_Bit"[label="  t", dir=forward];
+
+	"node_Bin" -> "node_Bina"[label="  a", dir=forward];
+	"node_Bina" -> "node_Binan"[label="  n", dir=forward];
+	"node_Binan" -> "node_Binanc"[label="  c", dir=forward];
+	"node_Binanc" -> "node_Binance"[label="  e", dir=forward];
+
+	"node_Bit" -> "node_Bitf"[label="  f", dir=forward];
+	"node_Bitf" -> "node_Bitfi"[label="  i", dir=forward];
+	"node_Bitfi" -> "node_Bitfin"[label="  n", dir=forward];
+	"node_Bitfin" -> "node_Bitfine"[label="  e", dir=forward];
+	"node_Bitfine" -> "node_Bitfinex"[label="  x", dir=forward];
+
+	"node_C" -> "node_Co"[label="  o", dir=forward];
+	"node_Co" -> "node_Coi"[label="  i", dir=forward];
+	"node_Coi" -> "node_Coin"[label="  n", dir=forward];
+	"node_Coin" -> "node_Coinb"[label="  b", dir=forward];
+	"node_Coinb" -> "node_Coinba"[label="  a", dir=forward];
+	"node_Coinba" -> "node_Coinbas"[label="  s", dir=forward];
+	"node_Coinbas" -> "node_Coinbase"[label="  e", dir=forward];
+
+}
