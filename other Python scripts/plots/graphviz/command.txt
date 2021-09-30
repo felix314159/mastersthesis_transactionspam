@@ -1,0 +1,8 @@
+PREREQUISITES:
+	sudo apt install graphviz
+##################
+COMPILE DOT FILE TO PS:
+	dot -Tps trie.dot -o trie.ps
+##################
+CONVERT PS TO PNG (using Image Magick):
+	convert -colorspace RGB -density 200 trie.ps trie.png
